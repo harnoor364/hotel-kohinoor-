@@ -3,13 +3,20 @@
   'use strict';
 
   var header = document.getElementById('siteHeader');
+  var navBar = document.getElementById('navBar');
+  var slot = navBar.parentNode;
   var nav = document.getElementById('siteNav');
   var toggle = document.getElementById('navToggle');
 
-  /* Header turns solid once the page scrolls */
-  function onScroll() { header.classList.toggle('is-solid', window.scrollY > 40); }
+  /* The navigation row pins to the top once the utility bar and logo scroll away */
+  function onScroll() {
+    var pinned = window.scrollY > slot.offsetTop;
+    if (pinned !== header.classList.contains('is-pinned')) header.classList.toggle('is-pinned', pinned);
+  }
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
   onScroll();
+  window.KPNavHeight = function () { return navBar.offsetHeight; };
 
   /* Mobile menu */
   function setMenu(open) {
@@ -29,7 +36,7 @@
     var target = id === 'top' ? document.body : document.getElementById(id);
     if (!target) return;
     e.preventDefault();
-    var y = id === 'top' ? 0 : target.getBoundingClientRect().top + window.scrollY - (header.offsetHeight - 1);
+    var y = id === 'top' ? 0 : target.getBoundingClientRect().top + window.scrollY - (navBar.offsetHeight - 1);
     window.scrollTo({ top: y, behavior: 'instant' in document.documentElement.style ? 'instant' : 'auto' });
     if (history.replaceState) history.replaceState(null, '', '#' + id);
   });
@@ -70,7 +77,7 @@
     if (!btn) return;
     var kind = btn.getAttribute('data-open');
     if (kind === 'contact') {
-      showNotice(btn.getAttribute('data-title') || 'Contact us');
+      showNotice(btn.getAttribute('data-title') || 'Contact us', btn.getAttribute('data-lead'), btn.getAttribute('data-body'));
     } else if (kind === 'booking') {
       var room = btn.getAttribute('data-room');
       if (room) bookingForm.elements.room.value = room;

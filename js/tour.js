@@ -56,8 +56,8 @@ function scrollToProgress(p, smoothScroll) {
 }
 $('tourSkip').addEventListener('click', () => {
   const rooms = $('rooms');
-  const header = $('siteHeader');
-  const y = rooms.getBoundingClientRect().top + window.scrollY - header.offsetHeight + 1;
+  const navH = window.KPNavHeight ? window.KPNavHeight() : 56;
+  const y = rooms.getBoundingClientRect().top + window.scrollY - navH + 1;
   window.scrollTo({ top: y, behavior: 'instant' });
   rooms.setAttribute('tabindex', '-1');
   rooms.focus({ preventScroll: true });

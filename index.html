@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hotel Kohinoor Palace | Hotel on Pakhowal Road, Ludhiana</title>
   <meta name="description" content="Hotel Kohinoor Palace on Pakhowal Road, Ludhiana: four room categories from Deluxe to Presidential, two banquet halls for weddings and events, Groove Restobar and 24-hour reception.">
-  <meta name="theme-color" content="#1f0d0c">
+  <meta name="theme-color" content="#7a6358">
   <meta property="og:title" content="Hotel Kohinoor Palace, Pakhowal Road, Ludhiana">
   <meta property="og:description" content="Rooms, banquets and Groove Restobar on Pakhowal Road, Ludhiana. Take the 3D walkthrough.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=70&auto=format&fit=crop">
   <meta name="robots" content="noindex">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f0d0c'/%3E%3Cpath d='M32 10 L50 28 L32 54 L14 28 Z' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3Cpath d='M14 28 H50 M24 28 L32 54 L40 28 M24 28 L32 10 L40 28' fill='none' stroke='%23c9a45c' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%237a6358'/%3E%3Cpath d='M14 34 L32 18 L50 34' fill='none' stroke='%23fff' stroke-width='4'/%3E%3Cpath d='M22 46 V32 M42 46 V32' stroke='%23fff' stroke-width='4'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -27,32 +27,64 @@
   <!-- Branded loading screen (shown until the 3D scene is ready) -->
   <div class="loader" id="loader" role="status" aria-live="polite">
     <div class="loader__inner">
-      <svg class="loader__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L54 28 L32 58 L10 28 Z"/><path d="M10 28 H54 M22 28 L32 58 L42 28 M22 28 L32 6 L42 28"/></svg>
-      <p class="loader__name">Hotel Kohinoor Palace</p>
+      <span class="logo logo--loader" aria-hidden="true"><span class="logo__word">KOH<span class="logo__roof">I</span>NOOR</span><span class="logo__sub">Palace · Ludhiana</span></span>
       <p class="loader__sub">Preparing your walkthrough</p>
       <div class="loader__bar"><span id="loaderBar"></span></div>
     </div>
   </div>
+  </div>
 
-  <!-- Header -->
+  <!-- Header: utility bar, centred logo, navigation -->
   <header class="site-header" id="siteHeader">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Hotel Kohinoor Palace, back to top">
-        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L54 28 L32 58 L10 28 Z"/><path d="M10 28 H54 M22 28 L32 58 L42 28 M22 28 L32 6 L42 28"/></svg>
-        <span class="brand__text">Hotel Kohinoor Palace</span>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <ul class="topbar__group">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Pakhowal Road, Ludhiana</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24-hour reception</li>
+          <li class="topbar__langs" aria-label="Language">
+            <button type="button" class="is-active" aria-pressed="true">EN</button>
+            <button type="button" data-open="contact" data-title="Hindi version" data-lead="Hindi version coming soon." data-body="This demo is in English. Hindi and Punjabi pages can be added for the live site.">HI</button>
+            <button type="button" data-open="contact" data-title="Punjabi version" data-lead="Punjabi version coming soon." data-body="This demo is in English. Hindi and Punjabi pages can be added for the live site.">PA</button>
+          </li>
+        </ul>
+        <ul class="topbar__group topbar__group--right">
+          <li><button type="button" data-open="booking"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="1"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>My Booking</button></li>
+          <li><a href="#reviews"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg>Add Your Review</a></li>
+          <li class="topbar__call">
+            <button type="button" data-open="contact" data-title="Call us">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 14.5V18a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+              <span><strong>Call Reception</strong><small>Number coming soon</small></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="logobar">
+      <a class="logo" href="#top" aria-label="Hotel Kohinoor Palace, back to top">
+        <span class="logo__word">KOH<span class="logo__roof">I</span>NOOR</span>
+        <span class="logo__sub">Palace · Ludhiana</span>
       </a>
-      <nav class="nav" id="siteNav" aria-label="Main">
-        <a href="#rooms">Rooms</a>
-        <a href="#banquet">Banquet</a>
-        <a href="#restobar">Groove Restobar</a>
-        <a href="#location">Nearby</a>
-        <a href="#contact">Contact</a>
-        <button class="btn btn--gold nav__book" type="button" data-open="booking">Book Now</button>
-      </nav>
-      <button class="btn btn--gold header__book" type="button" data-open="booking">Book Now</button>
-      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+    </div>
+
+    <div class="navbar-slot">
+      <div class="navbar" id="navBar">
+        <div class="container navbar__inner">
+          <a class="logo logo--mini" href="#top" aria-hidden="true" tabindex="-1"><span class="logo__word">KOH<span class="logo__roof">I</span>NOOR</span></a>
+          <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="nav" id="siteNav" aria-label="Main">
+            <a href="#top">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#banquet">Banquet</a>
+            <a href="#restobar">Groove Restobar</a>
+            <a href="#location">Nearby</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <button class="btn btn--brown btn--sm nav__book" type="button" data-open="booking">Book Now</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -78,32 +110,32 @@
 
         <div class="tour__captions">
           <div class="tour__caption" data-scene="0">
-            <p class="eyebrow">Hotel Kohinoor Palace</p>
-            <h1>Your Stay on Pakhowal Road, Ludhiana</h1>
+            <h1 class="hero-title">Kohinoor Palace</h1>
+            <p class="hero-sub">Your Stay on Pakhowal Road, Ludhiana</p>
           </div>
           <div class="tour__caption" data-scene="1">
-            <p class="eyebrow">Lobby &amp; Reception</p>
-            <h2>24-hour reception, express check-in and check-out</h2>
+            <h2 class="hero-title">The Lobby</h2>
+            <p class="hero-sub">24-hour reception, express check-in and check-out</p>
           </div>
           <div class="tour__caption" data-scene="2">
-            <p class="eyebrow">Guest Floors</p>
-            <h2>Quiet, carpeted corridors to your door</h2>
+            <h2 class="hero-title">Guest Floors</h2>
+            <p class="hero-sub">Quiet, carpeted corridors to your door</p>
           </div>
           <div class="tour__caption" data-scene="3">
-            <p class="eyebrow">Rooms &amp; Suites</p>
-            <h2>Four room categories, from Deluxe to Presidential</h2>
+            <h2 class="hero-title">Rooms &amp; Suites</h2>
+            <p class="hero-sub">Four room categories, from Deluxe to Presidential</p>
           </div>
           <div class="tour__caption" data-scene="4">
-            <p class="eyebrow">Banquets</p>
-            <h2>Two banquet halls for weddings, parties and conferences</h2>
+            <h2 class="hero-title">Banquets</h2>
+            <p class="hero-sub">Two banquet halls for weddings, parties and conferences</p>
           </div>
           <div class="tour__caption" data-scene="5">
-            <p class="eyebrow">Dining &amp; Drinks</p>
-            <h2>Groove Restobar</h2>
+            <h2 class="hero-title">Groove Restobar</h2>
+            <p class="hero-sub">Dinner, drinks and long evenings</p>
           </div>
           <div class="tour__caption tour__caption--final" data-scene="6">
-            <p class="eyebrow">Plan your stay</p>
-            <h2>See you on Pakhowal Road</h2>
+            <h2 class="hero-title">Plan Your Stay</h2>
+            <p class="hero-sub">See you on Pakhowal Road</p>
           </div>
         </div>
 
@@ -468,10 +500,7 @@
   <footer class="site-footer" id="contact">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <a class="brand brand--footer" href="#top">
-          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L54 28 L32 58 L10 28 Z"/><path d="M10 28 H54 M22 28 L32 58 L42 28 M22 28 L32 6 L42 28"/></svg>
-          <span class="brand__text">Hotel Kohinoor Palace</span>
-        </a>
+        <a class="logo logo--footer" href="#top"><span class="logo__word">KOH<span class="logo__roof">I</span>NOOR</span><span class="logo__sub">Palace · Ludhiana</span></a>
         <p>Rooms, banquets and Groove Restobar on Pakhowal Road, Ludhiana.</p>
       </div>
       <div>

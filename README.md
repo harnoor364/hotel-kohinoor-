@@ -2,23 +2,34 @@
 
 A single-page sales demo for Hotel Kohinoor Palace, Pakhowal Road, Ludhiana. It opens with a scroll-driven 3D walkthrough of the hotel, followed by rooms, banquets, Groove Restobar, reviews, amenities and location.
 
+Design: a light "chalet" look — taupe utility bar, centred logo, a navigation row that pins to the top on scroll, Poppins type, square buttons, and large thin uppercase hero titles.
+
 **This is a demo.** Prices, reviews, the Google rating, hall names and timings are placeholders. Photos are free Unsplash images. There is no real phone number or email: every contact button opens a "Contact number will be added soon" popup.
 
 ## Files
 
 ```
 index.html        page markup, title and meta description
-css/styles.css    design tokens (maroon / gold / cream), layout, responsive rules
+css/styles.css    design tokens (taupe / white / warm grey), layout, responsive rules
 js/main.js        header, mobile menu, popups, date validation, scroll reveals
 js/tour.js        walkthrough controller: picks the mode, maps scroll to progress, captions, skip, dots
 js/timeline.js    the 7 scenes and how scroll progress is split between them
 js/scene3d.js     the Three.js world (built only from primitives, no model downloads)
-netlify.toml      static hosting config
+vercel.json       Vercel static hosting config
+netlify.toml      Netlify static hosting config (optional alternative)
 ```
 
-No build step. Three.js r160 is loaded from jsDelivr only when the 3D tour runs; Google Fonts load Cormorant Garamond and Manrope.
+No build step. Three.js r160 is loaded from jsDelivr only when the 3D tour runs; Google Fonts loads Poppins.
 
-## Deploy on Netlify
+## Deploy on Vercel
+
+1. Go to https://vercel.com/new and import the `harnoor364/hotel-kohinoor-` GitHub repository.
+2. Framework preset: **Other**. Leave the build command and output directory empty (the site is plain static files in the repo root).
+3. Click **Deploy**. Every push to `main` redeploys automatically.
+
+Or from a terminal with the Vercel CLI: `npx vercel --prod` in this folder.
+
+## Deploy on Netlify (alternative)
 
 1. In Netlify choose **Add new site → Import an existing project**, pick this repository.
 2. Leave the build command empty and set the publish directory to `/` (already set in `netlify.toml`).

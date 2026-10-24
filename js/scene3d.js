@@ -43,9 +43,8 @@ export async function createWorld(THREE, canvas, { tier = 'high', onProgress = (
   try {
     await Promise.race([
       Promise.all([
-        document.fonts.load('600 120px "Cormorant Garamond"'),
-        document.fonts.load('italic 600 120px "Cormorant Garamond"'),
-        document.fonts.load('600 40px "Manrope"'),
+        document.fonts.load('500 120px "Poppins"'),
+        document.fonts.load('300 120px "Poppins"'),
       ]),
       new Promise((r) => setTimeout(r, 2500)),
     ]);
@@ -268,7 +267,7 @@ export async function createWorld(THREE, canvas, { tier = 'high', onProgress = (
     const gr = g.createLinearGradient(0, 0, w, h);
     gr.addColorStop(0, '#20100d'); gr.addColorStop(1, '#3a1c14');
     g.fillStyle = gr; g.fillRect(0, 0, w, h);
-    g.fillStyle = 'rgba(201,164,92,.7)'; g.font = '600 22px "Cormorant Garamond", serif'; g.textAlign = 'center';
+    g.fillStyle = 'rgba(201,164,92,.7)'; g.font = '300 20px "Poppins", sans-serif'; g.textAlign = 'center';
     g.fillText('Welcome, Guest', w / 2, h / 2 + 7);
   });
 
@@ -286,13 +285,13 @@ export async function createWorld(THREE, canvas, { tier = 'high', onProgress = (
     return t;
   }
   const signTex = textTex(1024, 192, (g) => {
-    g.font = '600 132px "Cormorant Garamond", Georgia, serif';
-    g.shadowColor = 'rgba(255,170,70,.95)'; g.shadowBlur = 28;
-    g.fillStyle = '#ffd98e'; g.fillText('Kohinoor Palace', 512, 100);
-    g.shadowBlur = 8; g.fillStyle = '#fff1cf'; g.fillText('Kohinoor Palace', 512, 100);
+    g.font = '500 104px "Poppins", sans-serif';
+    g.shadowColor = 'rgba(255,190,110,.9)'; g.shadowBlur = 26;
+    g.fillStyle = '#ffe2b0'; g.fillText('KOHINOOR PALACE', 512, 100);
+    g.shadowBlur = 6; g.fillStyle = '#fff6e6'; g.fillText('KOHINOOR PALACE', 512, 100);
   });
   const fasciaTex = textTex(1024, 96, (g) => {
-    g.font = '600 50px "Manrope", sans-serif';
+    g.font = '600 50px "Poppins", sans-serif';
     g.shadowColor = 'rgba(255,190,90,.9)'; g.shadowBlur = 12;
     g.fillStyle = '#f2d398'; g.fillText('H O T E L   K O H I N O O R   P A L A C E', 512, 50);
   });
@@ -300,23 +299,23 @@ export async function createWorld(THREE, canvas, { tier = 'high', onProgress = (
     g.strokeStyle = '#d9b876'; g.lineWidth = 5;
     g.beginPath(); g.moveTo(512, 18); g.lineTo(552, 58); g.lineTo(512, 110); g.lineTo(472, 58); g.closePath(); g.stroke();
     g.beginPath(); g.moveTo(472, 58); g.lineTo(552, 58); g.stroke();
-    g.font = '600 104px "Cormorant Garamond", Georgia, serif';
+    g.font = '400 92px "Poppins", sans-serif';
     g.fillStyle = '#e8cf95'; g.shadowColor = 'rgba(255,200,120,.5)'; g.shadowBlur = 10;
-    g.fillText('Kohinoor Palace', 512, 182);
-    g.font = '600 30px "Manrope", sans-serif'; g.shadowBlur = 0; g.fillStyle = '#d9b876';
+    g.fillText('KOHINOOR', 512, 182);
+    g.font = '600 30px "Poppins", sans-serif'; g.shadowBlur = 0; g.fillStyle = '#d9b876';
     g.fillText('R E C E P T I O N   ·   2 4   H O U R S', 512, 262);
   });
   const grooveTex = textTex(1024, 256, (g) => {
-    g.font = 'italic 600 150px "Cormorant Garamond", Georgia, serif';
+    g.font = '300 150px "Poppins", sans-serif';
     g.shadowColor = 'rgba(255,150,50,1)'; g.shadowBlur = 30;
-    g.fillStyle = '#ffc36e'; g.fillText('Groove', 512, 110);
-    g.shadowBlur = 6; g.fillStyle = '#fff0cc'; g.fillText('Groove', 512, 110);
-    g.font = '600 38px "Manrope", sans-serif'; g.shadowBlur = 10; g.fillStyle = '#f2c27a';
+    g.fillStyle = '#ffc36e'; g.fillText('GROOVE', 512, 110);
+    g.shadowBlur = 6; g.fillStyle = '#fff0cc'; g.fillText('GROOVE', 512, 110);
+    g.font = '600 38px "Poppins", sans-serif'; g.shadowBlur = 10; g.fillStyle = '#f2c27a';
     g.fillText('R E S T O B A R', 512, 212);
   });
   const plateTex = textTex(128, 64, (g) => {
     g.fillStyle = '#c9a45c'; g.fillRect(0, 0, 128, 64);
-    g.fillStyle = '#2a140f'; g.font = '700 38px "Manrope", sans-serif'; g.fillText('108', 64, 34);
+    g.fillStyle = '#2a140f'; g.font = '600 38px "Poppins", sans-serif'; g.fillText('108', 64, 34);
   });
   onProgress(0.2);
 
@@ -369,8 +368,8 @@ export async function createWorld(THREE, canvas, { tier = 'high', onProgress = (
   const goldGlow = M('#ffd58a', { basic: true });
   const warmLight = M('#ffe2ad', { basic: true });
   const cream = M('#efe3cf', { rough: 0.85 });
-  const maroon = M('#5a2520', { rough: 0.8 });
-  const velvet = M('#6e2a24', { rough: 0.95 });
+  const maroon = M('#5b4436', { rough: 0.75 });
+  const velvet = M('#8a7b70', { rough: 0.95 });
   const darkWood = M('#3a1d15', { rough: 0.55 });
   const blackGloss = M('#141010', { rough: 0.25 });
 
@@ -721,9 +720,9 @@ export async function createWorld(THREE, canvas, { tier = 'high', onProgress = (
   /* ================= GUEST ROOM ================= */
   function buildRoom(g) {
     const zc = -47.15, D = 11.7;
-    floor(g, M('#b9a184', { rough: 1 }), 11, D, -7.5, 0.03, zc);
+    floor(g, M('#9a918a', { rough: 1 }), 11, D, -7.5, 0.03, zc);
     ceiling(g, M('#f1e7d8', { rough: 0.9 }), 11, D, -7.5, 3.2, zc);
-    const wall = M('#eadcc6', { rough: 0.9 });
+    const wall = M('#d2b693', { rough: 0.75 });
     box(g, wall, 4.9, 3.2, 0.3, -10.55, 1.6, -41.15);
     box(g, wall, 4.9, 3.2, 0.3, -4.45, 1.6, -41.15);
     box(g, wall, 1.2, 0.9, 0.3, -7.5, 2.75, -41.15);
@@ -733,12 +732,12 @@ export async function createWorld(THREE, canvas, { tier = 'high', onProgress = (
     // Headboard wall
     box(g, maroon, 3.8, 2.7, 0.08, -8.5, 1.55, -52.96);
     [[3.9, 0.05, 0.05, -8.5, 2.92, -52.9], [0.05, 2.75, 0.05, -10.42, 1.55, -52.9], [0.05, 2.75, 0.05, -6.58, 1.55, -52.9]].forEach((b) => box(g, goldMetal, ...b));
-    box(g, M('#7a3028', { rough: 0.95 }), 2.5, 1.1, 0.14, -8.5, 1.05, -52.86, { cast: true });
+    box(g, M('#9a8c80', { rough: 0.95 }), 2.5, 1.1, 0.14, -8.5, 1.05, -52.86, { cast: true });
     // Bed
     box(g, darkWood, 2.0, 0.35, 2.1, -8.5, 0.175, -51.9, { cast: true });
     box(g, M('#f6f0e6', { rough: 0.95 }), 1.95, 0.25, 2.05, -8.5, 0.47, -51.9, { cast: true });
     box(g, M('#fbf7f0', { rough: 0.95 }), 2.04, 0.1, 1.55, -8.5, 0.63, -51.55, { cast: true });
-    box(g, M('#6e2a24', { rough: 0.9 }), 2.08, 0.11, 0.45, -8.5, 0.645, -51.1, { cast: true });
+    box(g, M('#3e3936', { rough: 0.9 }), 2.08, 0.11, 0.45, -8.5, 0.645, -51.1, { cast: true });
     box(g, goldMetal, 2.09, 0.02, 0.03, -8.5, 0.7, -50.88);
     [[-9.0, 0.78, -52.6], [-8.0, 0.78, -52.6]].forEach(([x, y, z]) => box(g, M('#fbf7f0', { rough: 1 }), 0.72, 0.2, 0.4, x, y, z, { cast: true }));
     [[-9.0, 0.82, -52.3], [-8.0, 0.82, -52.3]].forEach(([x, y, z]) => box(g, M('#c9a45c', { rough: 0.9 }), 0.5, 0.16, 0.12, x, y, z));
@@ -760,8 +759,8 @@ export async function createWorld(THREE, canvas, { tier = 'high', onProgress = (
     box(g, maroon, 0.22, 0.28, 6.6, -2.12, 3.02, -47.5);
     glow(g, -2.4, 1.8, -47.5, 5.5, '#ffb070', 0.25, 3);
     // Seating by the window
-    armchair(g, -3.3, -45.5, PI, M('#6e2a24', { rough: 0.95 }));
-    armchair(g, -3.3, -49.5, 0, M('#6e2a24', { rough: 0.95 }));
+    armchair(g, -3.3, -45.5, PI, M('#cfc6bc', { rough: 0.95 }));
+    armchair(g, -3.3, -49.5, 0, M('#cfc6bc', { rough: 0.95 }));
     cyl(g, goldMetal, 0.05, 0.08, 0.5, -3.3, 0.25, -47.5, 10);
     cyl(g, M('#efe6d6', { rough: 0.2 }), 0.34, 0.34, 0.04, -3.3, 0.52, -47.5, 20, { cast: true });
     // TV

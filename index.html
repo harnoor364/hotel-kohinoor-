@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hotel Kohinoor Palace | Hotel on Pakhowal Road, Ludhiana</title>
+  <meta name="description" content="Hotel Kohinoor Palace on Pakhowal Road, Ludhiana: four room categories from Deluxe to Presidential, two banquet halls for weddings and events, Groove Restobar and 24-hour reception.">
+  <meta name="theme-color" content="#1f0d0c">
+  <meta property="og:title" content="Hotel Kohinoor Palace, Pakhowal Road, Ludhiana">
+  <meta property="og:description" content="Rooms, banquets and Groove Restobar on Pakhowal Road, Ludhiana. Take the 3D walkthrough.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=70&auto=format&fit=crop">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f0d0c'/%3E%3Cpath d='M32 10 L50 28 L32 54 L14 28 Z' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3Cpath d='M14 28 H50 M24 28 L32 54 L40 28 M24 28 L32 10 L40 28' fill='none' stroke='%23c9a45c' stroke-width='2'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#rooms">Skip to content</a>
+
+  <!-- Branded loading screen (shown until the 3D scene is ready) -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader__inner">
+      <svg class="loader__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L54 28 L32 58 L10 28 Z"/><path d="M10 28 H54 M22 28 L32 58 L42 28 M22 28 L32 6 L42 28"/></svg>
+      <p class="loader__name">Hotel Kohinoor Palace</p>
+      <p class="loader__sub">Preparing your walkthrough</p>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Hotel Kohinoor Palace, back to top">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L54 28 L32 58 L10 28 Z"/><path d="M10 28 H54 M22 28 L32 58 L42 28 M22 28 L32 6 L42 28"/></svg>
+        <span class="brand__text">Hotel Kohinoor Palace</span>
+      </a>
+      <nav class="nav" id="siteNav" aria-label="Main">
+        <a href="#rooms">Rooms</a>
+        <a href="#banquet">Banquet</a>
+        <a href="#restobar">Groove Restobar</a>
+        <a href="#location">Nearby</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn--gold nav__book" type="button" data-open="booking">Book Now</button>
+      </nav>
+      <button class="btn btn--gold header__book" type="button" data-open="booking">Book Now</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- SECTION 1: 3D walkthrough -->
+    <section class="tour" id="tour" aria-label="Walkthrough of Hotel Kohinoor Palace">
+      <div class="tour__stage" id="tourStage">
+        <canvas class="tour__canvas" id="tourCanvas" aria-hidden="true"></canvas>
+
+        <!-- Image sequence used for reduced motion / static fallback -->
+        <div class="tour__images" id="tourImages" aria-hidden="true">
+          <div class="tour__img" data-scene="0" data-src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=70&auto=format&fit=crop"></div>
+          <div class="tour__img" data-scene="1" data-src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1600&q=70&auto=format&fit=crop"></div>
+          <div class="tour__img" data-scene="2" data-src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1600&q=70&auto=format&fit=crop"></div>
+          <div class="tour__img" data-scene="3" data-src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1600&q=70&auto=format&fit=crop"></div>
+          <div class="tour__img" data-scene="4" data-src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1600&q=70&auto=format&fit=crop"></div>
+          <div class="tour__img" data-scene="5" data-src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600&q=70&auto=format&fit=crop"></div>
+          <div class="tour__img" data-scene="6" data-src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=70&auto=format&fit=crop"></div>
+        </div>
+
+        <div class="tour__scrim" aria-hidden="true"></div>
+        <div class="tour__fade" id="tourFade" aria-hidden="true"></div>
+
+        <div class="tour__captions">
+          <div class="tour__caption" data-scene="0">
+            <p class="eyebrow">Hotel Kohinoor Palace</p>
+            <h1>Your Stay on Pakhowal Road, Ludhiana</h1>
+          </div>
+          <div class="tour__caption" data-scene="1">
+            <p class="eyebrow">Lobby &amp; Reception</p>
+            <h2>24-hour reception, express check-in and check-out</h2>
+          </div>
+          <div class="tour__caption" data-scene="2">
+            <p class="eyebrow">Guest Floors</p>
+            <h2>Quiet, carpeted corridors to your door</h2>
+          </div>
+          <div class="tour__caption" data-scene="3">
+            <p class="eyebrow">Rooms &amp; Suites</p>
+            <h2>Four room categories, from Deluxe to Presidential</h2>
+          </div>
+          <div class="tour__caption" data-scene="4">
+            <p class="eyebrow">Banquets</p>
+            <h2>Two banquet halls for weddings, parties and conferences</h2>
+          </div>
+          <div class="tour__caption" data-scene="5">
+            <p class="eyebrow">Dining &amp; Drinks</p>
+            <h2>Groove Restobar</h2>
+          </div>
+          <div class="tour__caption tour__caption--final" data-scene="6">
+            <p class="eyebrow">Plan your stay</p>
+            <h2>See you on Pakhowal Road</h2>
+          </div>
+        </div>
+
+        <form class="avail" id="availForm" novalidate aria-label="Check availability">
+          <div class="avail__field">
+            <label for="availIn">Check-in</label>
+            <input type="date" id="availIn" name="checkin" required>
+          </div>
+          <div class="avail__field">
+            <label for="availOut">Check-out</label>
+            <input type="date" id="availOut" name="checkout" required>
+          </div>
+          <div class="avail__field">
+            <label for="availGuests">Guests</label>
+            <select id="availGuests" name="guests">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5+ guests</option>
+            </select>
+          </div>
+          <button class="btn btn--gold avail__btn" type="submit">Check Availability</button>
+          <p class="avail__error" role="alert"></p>
+        </form>
+
+        <button class="tour__skip" id="tourSkip" type="button">Skip tour
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l6 6-6 6M13 6l6 6-6 6"/></svg>
+        </button>
+
+        <nav class="tour__dots" id="tourDots" aria-label="Walkthrough scenes"></nav>
+
+        <div class="tour__hint" id="tourHint" aria-hidden="true">
+          <span>Scroll to walk through</span>
+          <i></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: About -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="reveal">
+          <p class="eyebrow eyebrow--dark">The location</p>
+          <h2 class="h2">On Pakhowal Road, close to everything Ludhiana is known for</h2>
+        </div>
+        <div class="about__copy reveal">
+          <p>Hotel Kohinoor Palace sits on Pakhowal Road, one of the city's busiest corridors, so business meetings, family functions and weekend shopping are all a short drive away.</p>
+          <p>Arriving by train or bus is easy, and the airport at Sahnewal is under half an hour away for most of the day.</p>
+        </div>
+        <ul class="stats reveal" aria-label="Distances from the hotel">
+          <li><strong>9 km</strong><span>Ludhiana Railway Station</span></li>
+          <li><strong>7 km</strong><span>Bus Stand</span></li>
+          <li><strong>14 km</strong><span>Sahnewal Airport</span></li>
+          <li><strong>&lt; 5 km</strong><span>Shopping malls</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Rooms -->
+    <section class="section rooms" id="rooms">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow eyebrow--dark">Rooms &amp; Suites</p>
+          <h2 class="h2">Four ways to stay</h2>
+          <p class="section__lede">Every category has air conditioning, Wi-Fi and 24-hour room service. Prices shown are placeholders for this demo.</p>
+        </header>
+
+        <div class="rooms__grid">
+          <article class="room-card reveal">
+            <div class="room-card__media">
+              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=70&auto=format&fit=crop" alt="Deluxe room with a queen bed and work desk" loading="lazy" width="800" height="560">
+              <span class="tag">Demo price</span>
+            </div>
+            <div class="room-card__body">
+              <h3>Deluxe Room</h3>
+              <p>Our most-booked room for business travellers: a quiet layout, a proper work desk, a rain shower and blackout curtains for an early start.</p>
+              <dl class="specs">
+                <div><dt>Size</dt><dd>240 sq ft</dd></div>
+                <div><dt>Bed</dt><dd>Queen</dd></div>
+                <div><dt>Guests</dt><dd>Up to 2</dd></div>
+              </dl>
+              <ul class="ticks">
+                <li>Work desk with charging points</li>
+                <li>Rain shower</li>
+                <li>Tea and coffee tray</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="price"><small>from</small> ₹2,999<small>/night</small></p>
+                <button class="btn btn--outline" type="button" data-open="booking" data-room="Deluxe Room">Check dates</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card reveal">
+            <div class="room-card__media">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=70&auto=format&fit=crop" alt="Club room with a king bed and window seating" loading="lazy" width="800" height="560">
+              <span class="tag">Demo price</span>
+            </div>
+            <div class="room-card__body">
+              <h3>Club Room</h3>
+              <p>Extra floor space and a window seat looking out over Pakhowal Road. Comfortable for couples staying a few nights, or a small family.</p>
+              <dl class="specs">
+                <div><dt>Size</dt><dd>300 sq ft</dd></div>
+                <div><dt>Bed</dt><dd>King</dd></div>
+                <div><dt>Guests</dt><dd>2 adults + 1 child</dd></div>
+              </dl>
+              <ul class="ticks">
+                <li>Window seating nook</li>
+                <li>Mini fridge</li>
+                <li>Extra bed on request</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="price"><small>from</small> ₹3,799<small>/night</small></p>
+                <button class="btn btn--outline" type="button" data-open="booking" data-room="Club Room">Check dates</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card reveal">
+            <div class="room-card__media">
+              <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=70&auto=format&fit=crop" alt="Executive room with a lounge corner" loading="lazy" width="800" height="560">
+              <span class="tag">Demo price</span>
+            </div>
+            <div class="room-card__body">
+              <h3>Executive Room</h3>
+              <p>Made for longer work trips, with a separate lounge corner for small meetings, a larger wardrobe and a bathroom with a bathtub.</p>
+              <dl class="specs">
+                <div><dt>Size</dt><dd>360 sq ft</dd></div>
+                <div><dt>Bed</dt><dd>King or twin</dd></div>
+                <div><dt>Guests</dt><dd>Up to 3</dd></div>
+              </dl>
+              <ul class="ticks">
+                <li>Lounge corner with sofa</li>
+                <li>Bathtub</li>
+                <li>Late check-out on request</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="price"><small>from</small> ₹4,999<small>/night</small></p>
+                <button class="btn btn--outline" type="button" data-open="booking" data-room="Executive Room">Check dates</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card room-card--feature reveal">
+            <div class="room-card__media">
+              <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=70&auto=format&fit=crop" alt="Presidential suite living area" loading="lazy" width="800" height="560">
+              <span class="tag">Demo price</span>
+            </div>
+            <div class="room-card__body">
+              <h3>Presidential Suite</h3>
+              <p>A separate living and dining room, a walk-in wardrobe and a marble bathroom. The natural choice for wedding families and VIP guests.</p>
+              <dl class="specs">
+                <div><dt>Size</dt><dd>650 sq ft</dd></div>
+                <div><dt>Bed</dt><dd>King + sofa bed</dd></div>
+                <div><dt>Guests</dt><dd>Up to 4</dd></div>
+              </dl>
+              <ul class="ticks">
+                <li>Separate living room</li>
+                <li>Dining table for four</li>
+                <li>Butler on call</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="price"><small>from</small> ₹7,999<small>/night</small></p>
+                <button class="btn btn--outline" type="button" data-open="booking" data-room="Presidential Suite">Check dates</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Banquet -->
+    <section class="section section--dark banquet" id="banquet">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Banquets &amp; Events</p>
+          <h2 class="h2">Two halls, up to 300 guests</h2>
+          <p class="section__lede">Use them separately for two functions on the same day, or together for a large wedding reception. In-house catering and decor teams handle the details.</p>
+        </header>
+
+        <div class="halls">
+          <article class="hall reveal">
+            <div class="hall__media">
+              <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=900&q=70&auto=format&fit=crop" alt="Large banquet hall set for a wedding reception" loading="lazy" width="900" height="600">
+            </div>
+            <div class="hall__body">
+              <p class="hall__cap"><strong>200</strong> guests</p>
+              <h3>Durbar Hall</h3>
+              <p>The larger hall, with a raised stage and space for a dance floor. Built for wedding receptions, sangeet nights and ring ceremonies.</p>
+              <ul class="chips"><li>Weddings</li><li>Receptions</li><li>Sangeet</li></ul>
+            </div>
+          </article>
+          <article class="hall reveal">
+            <div class="hall__media">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=70&auto=format&fit=crop" alt="Smaller event room decorated for a party" loading="lazy" width="900" height="600">
+            </div>
+            <div class="hall__body">
+              <p class="hall__cap"><strong>100</strong> guests</p>
+              <h3>Noor Hall</h3>
+              <p>A flexible room for birthdays, kitty parties and anniversaries, which converts to a theatre or classroom layout for corporate meetings.</p>
+              <ul class="chips"><li>Birthdays</li><li>Corporate</li><li>Conferences</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="banquet__cta reveal">
+          <button class="btn btn--gold btn--lg" type="button" data-open="contact" data-title="Enquire for your event">Enquire for your event</button>
+          <p class="note">Hall names are placeholders for this demo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Groove Restobar -->
+    <section class="section restobar" id="restobar">
+      <div class="restobar__media" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1400&q=70&auto=format&fit=crop" alt="" loading="lazy" width="1400" height="933">
+      </div>
+      <div class="container restobar__inner">
+        <div class="restobar__card reveal">
+          <p class="eyebrow">In-house restobar</p>
+          <h2 class="h2">Groove Restobar</h2>
+          <p>Low lights, a long bar and a kitchen that runs from Punjabi classics to bar bites. Come in for dinner after a day in the city, or stay on for drinks with friends.</p>
+          <dl class="timings">
+            <div><dt>Open</dt><dd>Timings to be confirmed</dd></div>
+            <div><dt>Kitchen</dt><dd>Multi-cuisine, veg &amp; non-veg</dd></div>
+            <div><dt>Seating</dt><dd>Bar counter, lounge and tables</dd></div>
+          </dl>
+          <button class="btn btn--outline-light" type="button" data-open="contact" data-title="Reserve a table">Reserve a table</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Reviews -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <header class="section__head section__head--row reveal">
+          <div>
+            <p class="eyebrow eyebrow--dark">Guest reviews</p>
+            <h2 class="h2">What guests say</h2>
+          </div>
+          <div class="g-badge">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9z"/><path fill="#EA4335" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 0 0 3.1 7.5L6.4 10C7.2 7.8 9.4 6 12 6z"/></svg>
+            <div>
+              <strong>4.3</strong> on Google
+              <span class="stars" aria-label="4.3 out of 5 stars"><i style="--fill:86%"></i></span>
+            </div>
+            <span class="g-badge__demo">Demo</span>
+          </div>
+        </header>
+
+        <div class="reviews__track">
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 out of 5 stars"><i style="--fill:100%"></i></span>
+            <blockquote>"We reached from the station after midnight and check-in took five minutes. Room was spotless and the AC was quiet."</blockquote>
+            <figcaption><strong>Gurpreet S.</strong><span>Business trip · Aug 2026</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 out of 5 stars"><i style="--fill:100%"></i></span>
+            <blockquote>"Held my parents' anniversary dinner in the smaller hall. Food came out hot and the staff kept things on schedule."</blockquote>
+            <figcaption><strong>Neha M.</strong><span>Family event · Jul 2026</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="4 out of 5 stars"><i style="--fill:80%"></i></span>
+            <blockquote>"Handy location on Pakhowal Road, the malls are close. Breakfast spread could have a bit more variety."</blockquote>
+            <figcaption><strong>Rahul K.</strong><span>Couple · Jun 2026</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="4 out of 5 stars"><i style="--fill:80%"></i></span>
+            <blockquote>"Groove has a nice evening feel and the music isn't so loud that you can't talk. Try the tandoori platter."</blockquote>
+            <figcaption><strong>Simran K.</strong><span>Dinner · May 2026</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 out of 5 stars"><i style="--fill:100%"></i></span>
+            <blockquote>"Stayed a week in an Executive room for work. Wi-Fi held up on video calls and housekeeping was on time daily."</blockquote>
+            <figcaption><strong>Arjun T.</strong><span>Long stay · Apr 2026</span></figcaption>
+          </figure>
+        </div>
+        <p class="note note--dark">Sample reviews shown for this demo. The live site will display the hotel's Google reviews.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Amenities -->
+    <section class="section amenities" id="amenities">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow eyebrow--dark">Amenities</p>
+          <h2 class="h2">The essentials, handled</h2>
+        </header>
+        <ul class="amenity-grid">
+          <li class="amenity reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 19a26 26 0 0 1 36 0M11 25a19 19 0 0 1 26 0M16.5 31a11 11 0 0 1 15 0"/><circle cx="24" cy="37" r="2.2"/></svg>
+            <h3>Free Wi-Fi</h3><p>In every room and public area</p>
+          </li>
+          <li class="amenity reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 34h36M9 34a15 15 0 0 1 30 0M24 19v-3M21 16h6"/><path d="M8 39h32"/></svg>
+            <h3>24-hr Room Service</h3><p>Hot meals at any hour</p>
+          </li>
+          <li class="amenity reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 6v14a4 4 0 0 1-8 0V6M10 6v36M34 42V6c-5 2-7 8-7 14s2 8 7 8"/></svg>
+            <h3>Multi-cuisine Dining</h3><p>Punjabi, North Indian and continental</p>
+          </li>
+          <li class="amenity reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30l3-9a4 4 0 0 1 4-3h18a4 4 0 0 1 4 3l3 9v7H8z"/><path d="M8 30h32M12 37v4M36 37v4"/><circle cx="14" cy="33.5" r="1.5"/><circle cx="34" cy="33.5" r="1.5"/></svg>
+            <h3>Valet Parking</h3><p>On-site parking for guests and events</p>
+          </li>
+          <li class="amenity reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M26 4L12 27h11l-2 17 15-24H25z"/></svg>
+            <h3>Power Backup</h3><p>Full generator backup, no interruptions</p>
+          </li>
+          <li class="amenity reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4v40M7 14l34 20M7 34l34-20"/><path d="M19 7l5 4 5-4M19 41l5-4 5 4M5 20l6-1-2-6M43 28l-6 1 2 6M5 28l6 1-2 6M43 20l-6-1 2-6"/></svg>
+            <h3>Air-conditioned Rooms</h3><p>Individually controlled AC</p>
+          </li>
+          <li class="amenity reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 30l40-14c2-.7 3 1.6 1.2 2.6L30 27l-6 13-4-1 2-9-9 3-4 5-3-1 2-6z"/><path d="M4 44h40"/></svg>
+            <h3>Airport Transfer</h3><p>Pick-up from Sahnewal on request</p>
+          </li>
+          <li class="amenity reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="4" width="32" height="40" rx="3"/><path d="M8 12h32"/><circle cx="24" cy="28" r="9"/><path d="M17 29c3-3 6 3 9 0s4-2 5-1"/><circle cx="14" cy="8" r="1"/><circle cx="19" cy="8" r="1"/></svg>
+            <h3>Laundry</h3><p>Same-day laundry and pressing</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 8: Location -->
+    <section class="section location" id="location">
+      <div class="container location__grid">
+        <div class="map reveal" role="img" aria-label="Map placeholder for Hotel Kohinoor Palace, Pakhowal Road">
+          <svg class="map__roads" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path d="M-10 210 C 90 190, 180 170, 410 120" class="r r--main"/>
+            <path d="M120 -10 C 140 80, 170 160, 230 310" class="r"/>
+            <path d="M-10 90 C 80 110, 200 90, 410 40" class="r r--thin"/>
+            <path d="M300 -10 C 290 90, 300 180, 340 310" class="r r--thin"/>
+            <path d="M-10 270 C 120 250, 260 250, 410 230" class="r r--thin"/>
+            <path d="M40 -10 C 60 100, 40 200, 70 310" class="r r--thin"/>
+          </svg>
+          <div class="map__pin">
+            <svg viewBox="0 0 32 44" aria-hidden="true"><path d="M16 1C8 1 1.5 7.4 1.5 15.4 1.5 26 16 43 16 43s14.5-17 14.5-27.6C30.5 7.4 24 1 16 1z"/><circle cx="16" cy="15.5" r="5.5"/></svg>
+            <span>Hotel Kohinoor Palace</span>
+          </div>
+          <p class="map__label">Google Map will be embedded here</p>
+        </div>
+        <div class="location__info reveal">
+          <p class="eyebrow eyebrow--dark">Nearby</p>
+          <h2 class="h2">Getting here</h2>
+          <p class="location__addr">Pakhowal Road, Ludhiana, Punjab</p>
+          <ul class="distances">
+            <li><span>Ludhiana Railway Station</span><strong>9 km</strong></li>
+            <li><span>Bus Stand</span><strong>7 km</strong></li>
+            <li><span>Sahnewal Airport</span><strong>14 km</strong></li>
+            <li><span>Shopping malls</span><strong>within 5 km</strong></li>
+          </ul>
+          <button class="btn btn--maroon" type="button" data-open="contact" data-title="Get directions">Get directions</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 9: Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="#top">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L54 28 L32 58 L10 28 Z"/><path d="M10 28 H54 M22 28 L32 58 L42 28 M22 28 L32 6 L42 28"/></svg>
+          <span class="brand__text">Hotel Kohinoor Palace</span>
+        </a>
+        <p>Rooms, banquets and Groove Restobar on Pakhowal Road, Ludhiana.</p>
+      </div>
+      <div>
+        <h3 class="footer__title">Explore</h3>
+        <ul class="footer__links">
+          <li><a href="#rooms">Rooms &amp; Suites</a></li>
+          <li><a href="#banquet">Banquet Halls</a></li>
+          <li><a href="#restobar">Groove Restobar</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#location">Nearby</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__title">Contact</h3>
+        <ul class="footer__links">
+          <li>Pakhowal Road, Ludhiana, Punjab</li>
+          <li><button type="button" class="link-btn" data-open="contact">Phone: to be added</button></li>
+          <li><button type="button" class="link-btn" data-open="contact">Email: to be added</button></li>
+          <li>Reception open 24 hours</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__title">Plan a stay</h3>
+        <p>Check dates for any room category or ask about an event.</p>
+        <button class="btn btn--gold" type="button" data-open="booking">Book Now</button>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <p>© <span id="year">2026</span> Hotel Kohinoor Palace</p>
+      <p class="demo-label">Demo website · Images from Unsplash, prices and reviews are placeholders</p>
+    </div>
+  </footer>
+
+  <!-- Floating contact buttons -->
+  <div class="floaters" aria-label="Quick contact">
+    <button class="floater floater--call" type="button" data-open="contact" data-title="Call us">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 14.5V18a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+      <span>Call</span>
+    </button>
+    <button class="floater floater--wa" type="button" data-open="contact" data-title="WhatsApp us">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4A8.5 8.5 0 1 1 8.4 19z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9a5 5 0 0 1-2.8-2.8l.9-1-1-2z"/></svg>
+      <span>WhatsApp</span>
+    </button>
+  </div>
+
+  <!-- Contact "coming soon" popup -->
+  <dialog class="modal" id="noticeDialog" aria-labelledby="noticeTitle">
+    <form method="dialog" class="modal__inner">
+      <button class="modal__close" value="close" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <svg class="modal__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 6h7l3.5 9-4.5 2.8a22 22 0 0 0 12.2 12.2L31 25.5l9 3.5v7a4 4 0 0 1-4 4A32 32 0 0 1 6 10a4 4 0 0 1 4-4z"/></svg>
+      <h2 id="noticeTitle">Call us</h2>
+      <p class="modal__lead" id="noticeLead">Contact number will be added soon.</p>
+      <p class="modal__body" id="noticeBody">This is a demo website. The hotel's phone and WhatsApp details will appear here once confirmed.</p>
+      <button class="btn btn--gold" value="ok">Got it</button>
+    </form>
+  </dialog>
+
+  <!-- Booking popup -->
+  <dialog class="modal" id="bookingDialog" aria-labelledby="bookingTitle">
+    <form class="modal__inner" id="bookingForm" novalidate>
+      <button class="modal__close" type="button" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h2 id="bookingTitle">Check availability</h2>
+      <p class="modal__body">Pick your dates and we'll show what's open.</p>
+      <div class="modal__fields">
+        <label>Check-in<input type="date" name="checkin" required></label>
+        <label>Check-out<input type="date" name="checkout" required></label>
+        <label>Guests
+          <select name="guests">
+            <option value="1">1 guest</option>
+            <option value="2" selected>2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+            <option value="5">5+ guests</option>
+          </select>
+        </label>
+        <label>Room
+          <select name="room">
+            <option>Any room</option>
+            <option>Deluxe Room</option>
+            <option>Club Room</option>
+            <option>Executive Room</option>
+            <option>Presidential Suite</option>
+          </select>
+        </label>
+      </div>
+      <p class="avail__error" role="alert"></p>
+      <button class="btn btn--gold btn--block" type="submit">Check Availability</button>
+    </form>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+  <script type="module" src="js/tour.js"></script>
+</body>
+</html>
